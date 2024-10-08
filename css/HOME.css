@@ -1,0 +1,263 @@
+/* styles.css */
+
+/* Mengatur tampilan umum untuk body */
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Header tetap di posisi atas dan memiliki transisi */
+.fixed-header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header navbar yang berada di posisi atas */
+.fixed-navbar {
+    top: 0;
+}
+
+/* Mengatur padding untuk konten di bawah header */
+.content {
+    padding-top: 7rem;
+}
+
+/* Warna latar belakang header transparan */
+.navbar-transparent {
+    background-color: transparent;
+    color: white;
+}
+
+/* Warna latar belakang header solid */
+.navbar-solid {
+    background-color: #FF00D5; /* Mengubah warna navbar menjadi pink */
+    color: white;
+}
+
+/* Background untuk section */
+.section-bg {
+    background-image: url('../img/1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Efek bayangan pada teks */
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Animasi Muncul */
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animasi Scroll dengan Delay */
+.animate-scroll-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out 0.2s; /* Menambahkan delay 0.2 detik */
+}
+
+.animate-scroll-up.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animasi slide-in dan slide-out untuk promosi */
+.promo-slide-in {
+    animation: slideIn 1s forwards;
+}
+
+.promo-slide-out {
+    animation: slideOut 1s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+
+/* Memastikan ukuran gambar logo tidak melebihi batas tertentu */
+#navbar-icon {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Menyembunyikan menu mobile */
+.mobile-menu {
+    display: none;
+}
+
+/* Menampilkan menu mobile saat di layar kecil */
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+    .desktop-menu {
+        display: none;
+    }
+}
+
+/* Menyempurnakan ukuran logo di navbar */
+#navbar-icon {
+    width: 100px; /* Atur lebar logo sesuai kebutuhan */
+    height: auto; /* Tinggi disesuaikan secara otomatis */
+    max-width: 100%; /* Pastikan logo tidak melebihi batas */
+}
+
+/* Styling footer */
+.footer {
+    background-color: white;
+    color: black;
+    position: relative; /* Menambahkan posisi relatif untuk membuat lapisan bayangan merah */
+}
+
+.footer::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Menggeser bayangan merah ke atas */
+    width: 100%;
+    height: 10px;
+    background: rgb(255, 0, 213); /* Warna merah yang lebih terang dengan opacity yang lebih rendah */
+    z-index: -1; /* Menempatkan bayangan di belakang konten footer */
+}
+
+.footer h2,
+.footer h3 {
+    color: #ff00d5; /* Teks YUDABENGKEL dan JAM OPERASIONAL berwarna merah */
+}
+
+/* Teks navbar sebelum di-scroll */
+.desktop-menu a {
+    color: white; /* Warna teks sebelum di-scroll */
+    transition: color 0.3s; /* Transisi warna */
+}
+
+/* Hover pada teks navbar sebelum di-scroll */
+.desktop-menu a:hover {
+    color: #ff00d5; /* Warna teks saat hover */
+}
+
+/* Teks navbar setelah di-scroll */
+.navbar-solid .desktop-menu a {
+    color: white; /* Warna teks setelah di-scroll */
+}
+
+/* Menghilangkan hover setelah di-scroll */
+.navbar-solid .desktop-menu a:hover {
+    color: rgba(255, 255, 255, 0.7); /* Warna setengah putih */
+}
+
+/* Gaya default untuk tombol LOGIN */
+.login-button {
+    background-color: #FF00D5; /* Background pink */
+    color: white; /* Teks putih */
+    border: 2px solid #FF00D5; /* Border pink */
+    transition: all 0.3s ease-in-out; /* Transisi animasi */
+}
+
+/* Hover pada tombol LOGIN saat navbar dalam keadaan transparan */
+.login-button:hover {
+    background-color: white; /* Background putih saat hover */
+    color: #FF00D5; /* Teks pink saat hover */
+    border: none; /* Menghilangkan border saat hover */
+}
+
+/* Tombol LOGIN saat navbar dalam keadaan solid (scrolled) */
+.navbar-solid .login-button {
+    background-color: white; /* Background putih */
+    color: #FF00D5; /* Teks pink */
+    border: 2px solid white; /* Border putih */
+}
+
+/* Hover pada tombol LOGIN saat navbar dalam keadaan solid */
+.navbar-solid .login-button:hover {
+    background-color: #FF00D5; /* Background pink saat hover */
+    color: white; /* Teks putih saat hover */
+    border: 2px solid #FF00D5; /* Border pink */
+}
+
+/* Responsif untuk tampilan mobile */
+@media (max-width: 768px) {
+    /* Navbar mobile */
+    .desktop-menu {
+        display: none; /* Sembunyikan menu desktop */
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+        display: flex;
+        opacity: 3;
+        transition: opacity 0.3s ease;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+/* Atur ulang tombol dan ukuran teks agar terlihat bagus di mobile */
+.login-button {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Gaya untuk tombol hamburger */
+#mobile-menu-button {
+    background: transparent; /* Latar belakang transparan */
+    color: #ff00d5; /* Warna ikon hamburger */
+    font-size: 90px; /* Ukuran ikon */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat hover */
+}
+
+/* Gaya untuk tombol close */
+#close-menu-button {
+    background: transparent; /* Latar belakang transparan */
+    color: #ff00d5; /* Warna X (bisa diubah sesuai kebutuhan) */
+    font-size: 40px; /* Ukuran X */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat hover */
+}
+
+/* Gaya untuk menu mobile */
+#mobile-menu {
+    background-color: rgba(0, 0, 0, 0.8); /* Warna latar belakang menu mobile */
+}
+
+/* Gaya untuk link di menu mobile */
+#mobile-menu a {
+    color: #ff00d5; /* Warna teks link */
+    font-size: 24px; /* Ukuran teks link */
+    transition: color 0.3s; /* Transisi warna saat hover */
+}
+
+#mobile-menu a:hover {
+    color: #ffffff; /* Warna teks saat hover (contoh: emas) */
+}

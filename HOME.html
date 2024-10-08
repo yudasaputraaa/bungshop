@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BUNGASHOP</title>
+    <link rel="icon" href="img/LOGOICON.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/HOME.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gray-100">
+
+<!-- MULAI NAVBAR COMPONENT -->
+<header id="navbar" class="fixed-header fixed-navbar navbar-transparent animate-fade-in">
+    <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+        <a class="block" href="HOME.html" id="navbar-logo">
+            <span class="sr-only">HOME</span>
+            <img src="img/LOGOICON.png" alt="BUNGASHOP" class="h-14" id="navbar-icon">
+        </a>
+        <div class="flex flex-1 items-center justify-end md:justify-between">
+            <nav aria-label="Global" class="hidden md:block desktop-menu">
+                <ul class="flex items-center gap-6 text-sm">
+                    <li><a class="transition hover:text-white" href="HOME.html">HOME</a></li>
+                    <li><a class="text-white transition hover:text-white" href="TENTANGKAMI.html">TENTANG KAMI</a></li>
+                    <li><a class="text-white transition hover:text-white" href="PRODUK.html">PRODUK</a></li>
+                    <li><a class="text-white transition hover:text-white" href="KONTAK.html">KONTAK</a></li>
+                </ul>
+            </nav>
+            <a href="LOGIN.html" class="login-button hidden md:block px-4 py-2 rounded text-sm font-medium transition">LOGIN</a>
+            <div class="block md:hidden mobile-menu">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- SELESAI NAVBAR KOMPONEN -->
+
+<!-- MULAI MOBILE MENU -->
+<div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 hidden flex flex-col items-center justify-center z-50">
+    <button id="close-menu-button" class="text-white text-4xl absolute top-4 right-4">×</button>
+    <ul class="flex flex-col space-y-4 text-center">
+        <li><a href="HOME.html" class="text-white text-2xl">HOME</a></li>
+        <li><a href="TENTANGKAMI.html" class="text-white text-2xl">TENTANG KAMI</a></li>
+        <li><a href="PRODUK.html" class="text-white text-2xl">PRODUK</a></li>
+        <li><a href="KONTAK.html" class="text-white text-2xl">KONTAK</a></li>
+    </ul>
+</div>
+<!-- SELESAI MOBILE MENU -->
+
+
+<!-- MULAI SECTION KOMPONEN -->
+<section class="relative section-bg bg-cover bg-center bg-no-repeat content animate-fade-in">
+    <div class="absolute inset-0 bg-black/75 sm:bg-transparent sm:from-black/95 sm:to-black/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l">
+    </div>
+    <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
+        <div class="max-w-xl text-left animate-scroll-up">
+            <h1 class="text-3xl font-extrabold sm:text-5xl text-shadow mb-4">
+                Pastikan moment bahagia anda di
+                <strong class="block font-extrabold text-shadow" style="color: #FF00D5;">BUNGASHOP</strong>
+            </h1>
+            <p class="mt-4 max-w-lg sm:text-xl/relaxed text-shadow">
+                Kami menyediakan bunga segar terbaik untuk setiap momen spesial Anda.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-2">
+                <a href="ORDESEKARANG.html"
+                   class="block rounded px-8 py-3 text-sm font-medium text-white bg-pink-600
+                          hover:bg-white hover:text-pink-700 focus:outline-none focus:ring active:bg-pink-600 sm:w-auto">
+                    ORDER SEKARANG
+                </a>
+                <a href="TENTANGKAMI.html"
+                   class="block rounded px-8 py-3 text-sm font-medium text-white bg-transparent
+                          hover:bg-white hover:text-red-600 focus:bg-white focus:text-red-600 focus:outline-none
+                          focus:ring active:bg-white active:text-red-600 sm:w-auto">
+                    TENTANG KAMI →
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SELESAI SECTION KOMPONEN -->
+
+<!-- MULAI FOOTER KOMPONEN -->
+<footer class="footer py-8 animate-scroll-up">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <div>
+            <h2 class="text-xl font-bold mb-9 text-red-600 flex items-center gap-2">
+                <img src="img/LOGOICON.png" alt="Logo" class="h-20 w-130">
+            </h2>
+            <p class="text-gray-700 text-base">Jl. Jalan Raya No. 123, Jakarta Pusat</p>
+            <p class="text-gray-900 text-base">Telp: 08123456789 | Email: bungashop@gmail.com</p>
+        </div>
+        <div>
+            <h3 class="text-xl font-bold mb-2 text-red-900">JAM OPRASIONAL KAMI :</h3>
+            <p class="text-gray-900 text-base">Senin - Jumat: 08:00 - 17:00</p>
+            <p class="text-gray-900 text-base">Sabtu: 09:00 - 14:00</p>
+            <p class="text-gray-900 text-base">Minggu: Tutup</p>
+        </div>
+    </div>
+</footer>
+<!-- SELESAI FOOTER KOMPONEN -->
+
+<!-- ini js --->
+<script src="js/HOME.js" defer></script>
+<!-- --->
+</body>
+</html>
